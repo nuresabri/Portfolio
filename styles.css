@@ -5,17 +5,49 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'CustomFont'; 
+    src: url("Coolvetica\ Rg.otf");
+  }
+
+@font-face {
+    font-family: 'Custom2';
+    src: url("Coolvetica\ Rg\ Cond.otf");
+}
+  
+  h1 {
+    font-family: 'CustomFont', sans-serif; /* Use the font family */
+    /*outline-style: dotted;*/
+    letter-spacing: 0.25rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 4px 4px #a77575;
+
+  }
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'CustomFont', sans-serif;
     height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background: linear-gradient(-45deg, #889eff, #897cff, #9487d1, #6d4eb4);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     color: #fff;
+}
+
+table {
+    margin: auto;
+}
+
+p, ul {
+    font-family: 'CustomFont', sans-serif;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    font-display: ;
+    text-shadow: 2px 2px #a77575;
 }
 
 /* Gradient Background Animation */
@@ -28,35 +60,117 @@ body {
 /* Main Container */
 #main-container {
     text-align: center;
+    padding-top: 20px; /* Shift content higher */
+    width: 80%;
+}
+
+#Download {
+    float: right;
+    position:static;
+}
+
+/* Content Section */
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* About Me Section */
+#aboutme {
+    text-align: left;
+    flex: 1;
+    margin-right: 20px;
+}
+
+#aboutme h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+#aboutme p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-shadow: 2px 2px #a77575;
+    margin-right: 100px;
 }
 
 /* Header */
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
+}
+
+img {
+    max-width: 600px; /* Make the resume image larger */
+    height: auto;
+    border-radius: 15px; /* Add curved edges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Buttons */
 .button-container {
     display: flex;
     justify-content: center;
+    padding: 25px;
     gap: 20px;
 }
 
 button {
+    font-family: 'Custom2';
     padding: 10px 20px;
-    font-size: 1.2rem;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px #a77575;
+    letter-spacing: 3px;
     font-weight: bold;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
+    background-color: rgba(85, 81, 81, 0.2);
+    border: 2px solid rgba(248, 218, 218, 0.5); /* Add a border */
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
     transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.4);
     transform: scale(1.1);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
 }
 
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-links button:hover {
+    background-color: #555;
+}
+
+.navbar-links button:focus {
+    outline: none;
+}

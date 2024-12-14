@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
 </head>
 <body>
     <div id="main-container">
         <h1>Contact Me</h1>
-        <p>Email: nuresabri3@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/nure-sabri-467b2325b/" target="_blank">linkedin.com/in/nuresabri</a></p>
-        <button onclick="window.history.back()">Back to Home</button>
+        <p>Feel free to contact me at any of the following!</p>
+        <p><i class="fas fa-envelope"></i> | Email: nuresabri3@gmail.com</p>
+        <p><i class="fas fa-phone-alt"></i> | Phone: +1 (618) 365 - 2841</p>
+        <p><i class="fab fa-linkedin"></i> | LinkedIn: <a href="https://www.linkedin.com/in/nure-sabri-467b2325b/" 
+            target="_blank">linkedin.com/nuresabri</a></p>
+        <p><i class="fab fa-github"></i> | Github: <a href="https://github.com/nuresabri" target="_blank"> github.com/nuresabri</a></p>
+        <div class="button-container">
+            <button onclick="window.history.back()">Back to Home</button>
+            <button onclick="navigateTo('about.html')">About Me</button>
+            <button onclick="navigateTo('projects.html')">Projects</button>
+        </div>
     </div>
 </body>
 </html>
+
+
