@@ -8,22 +8,20 @@
 @font-face {
     font-family: 'CustomFont'; 
     src: url("Coolvetica\ Rg.otf");
-  }
+}
 
 @font-face {
     font-family: 'Custom2';
     src: url("Coolvetica\ Rg\ Cond.otf");
 }
-  
-  h1 {
-    font-family: 'CustomFont', sans-serif; /* Use the font family */
-    /*outline-style: dotted;*/
+
+h1 {
+    font-family: 'CustomFont', sans-serif;
     letter-spacing: 0.25rem;
     padding-top: 10px;
     padding-bottom: 10px;
-    text-shadow: 4px 4px #a77575;
-
-  }
+    text-shadow: 4px 4px #c62323;
+}
 
 body {
     font-family: 'CustomFont', sans-serif;
@@ -32,7 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #889eff, #897cff, #9487d1, #6d4eb4);
+    background: linear-gradient(-45deg, #cad4ff, #a8b5ff, #5480e1, #315cf7);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     color: #fff;
@@ -46,30 +44,42 @@ p, ul {
     font-family: 'CustomFont', sans-serif;
     padding-bottom: 20px;
     font-size: 1.5rem;
-    font-display: ;
-    text-shadow: 2px 2px #a77575;
+    text-shadow: 2px 2px #c62323;
 }
 
-/* Gradient Background Animation */
+p a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+p a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+p a:active {
+    color: #b1563a;
+}
+
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Main Container */
 #main-container {
     text-align: center;
-    padding-top: 20px; /* Shift content higher */
+    padding-top: 20px;
     width: 80%;
 }
 
 #Download {
     float: right;
-    position:static;
+    position: static;
+    margin-right: 200px;
 }
 
-/* Content Section */
 #content {
     display: flex;
     justify-content: space-between;
@@ -78,8 +88,8 @@ p, ul {
     padding: 20px 0;
 }
 
-/* About Me Section */
 #aboutme {
+    padding-top: 200px;
     text-align: left;
     flex: 1;
     margin-right: 20px;
@@ -97,22 +107,25 @@ p, ul {
     margin-right: 100px;
 }
 
-/* Header */
+#projectstitle {
+    padding-top: 80px;
+}
+
 h1 {
     font-size: 4rem;
     margin-bottom: 20px;
 }
 
 img {
-    max-width: 600px; /* Make the resume image larger */
+    margin-top: 200px;
+    max-width: 600px;
     height: auto;
-    border-radius: 15px; /* Add curved edges */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin-right: auto;
     margin-left: auto;
 }
 
-/* Buttons */
 .button-container {
     display: flex;
     justify-content: center;
@@ -121,56 +134,117 @@ img {
 }
 
 button {
-    font-family: 'Custom2';
-    padding: 10px 20px;
-    font-size: 1.75rem;
-    text-shadow: 2px 2px #a77575;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: #fff;
-    background-color: rgba(85, 81, 81, 0.2);
-    border: 2px solid rgba(248, 218, 218, 0.5); /* Add a border */
-    border-radius: 5px;
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
     cursor: pointer;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    transition: all 0.3s ease;
+    text-shadow: 2px 2px #ef7f7f;
+    background-color: #8b9dff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    border-color: #171717;
+    transition: all .4s;
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #f85959,
+     0 15px 0 -4px #39a2db,
+     0 16px 10px -3px #39a2db;
 }
 
-/* Navigation Bar Styles */
+.button:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+     0 8px 0 -4px #39a2db,
+     0 12px 10px -3px #39a2db;
+}
+
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
     padding: 10px 20px;
-    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-title {
-    font-size: 1.5rem;
+    font-family: 'CustomFont', sans-serif;
+    text-shadow: 1.5px 1.5px #c62323;
+    font-size: 1.8rem;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.navbar-links button {
-    background-color: transparent;
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    font-family: 'CustomFont', sans-serif;
     color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-shadow: 1.5px 1.5px #c62323;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.navbar-links button:hover {
-    background-color: #555;
+.navbar-links a:hover {
+    color: #60aefc;
+    transform: scale(1.1);
 }
 
-.navbar-links button:focus {
-    outline: none;
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background-color: #b8d8f3;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better depth */
+    padding: 20px;
+    text-align: left;
+}
+
+.project-card h2 {
+    font-family: 'Custom2', sans-serif;
+    color: #fbfbfb;
+    font-size: 35px;
+    text-shadow: 1px 1px #070707;
+}
+
+.project-card p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-shadow: 1px 1px #090808;
+}
+
+.project-card a {
+    font-family: 'Custom2', sans-serif;
+    color: #007acc;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.project-card a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
 }

@@ -3,26 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Nure Sabri Portfolio - Projects</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="navbar">
+        <div class="navbar-title">Nure Sabri</div>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
     <div id="main-container">
-        <h1>Projects</h1>
+        <h1 id="projectstitle">Projects</h1>
         
         <p>Here are some of my notable projects:</p>
-        <ul>
-            <li>Chess Board Simulator</li>
-            <li>Movie Recommender with AI</li>
-            <li>Web Scraping Game Reviews</li>
-        </ul>
-        <table>
-            <div class="button-container">
-                <button onclick="navigateTo('index.html')">Back to Home</button>
-                <button onclick="navigateTo('about.html')">About Me</button>
-                <button onclick="navigateTo('contact.html')">Contact</button>
+        <div class="project-cards">
+            <div class="project-card">
+                <h2>Chess Board Simulator</h2>
+                <p>A chess board simulator built using React.js, JavaScript, HTML, and CSS. It allows users to interact with the board, making legal and illegal moves, and viewing available legal moves.</p>
+                <a href="https://github.com/your-github-repo-chess-simulator">GitHub Repository</a>
             </div>
+
+            <div class="project-card">
+                <h2>Movie Recommender with AI</h2>
+                <p>A movie recommendation app using Ollama's Phi-3.5 model to suggest movies based on user preferences. Built using JavaScript, React.js, Node.js, and HTML/CSS.</p>
+                <a href="https://github.com/your-github-repo-movie-recommender">GitHub Repository</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Web Scraping Game Reviews</h2>
+                <p>A project to scrape reviews of video games using Beautiful Soup and Scrapy. It targets reviews from various eCommerce sites, cleans the data, and saves it in text files for analysis.</p>
+                <a href="https://github.com/your-github-repo-web-scraping">GitHub Repository</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Enhancing Quicksort</h2>
+                <p>A project that compares different variations of the Quicksort algorithm, including strategies like choosing the pivot from the middle, random pivot, and the default approach. Implemented in multiple languages for performance analysis.</p>
+                <a href="https://github.com/your-github-repo-quicksort">GitHub Repository</a>
+            </div>
+
+        </div>
     </div>
+
 </body>
 </html>
+
+
+
+
+
