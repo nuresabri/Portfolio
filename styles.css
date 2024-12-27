@@ -354,16 +354,6 @@ canvas {
     z-index: 1; /* Behind the content */
 }
 
-/* Add this CSS to styles.css */
-.page {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-/* This class will be applied when the page is fully loaded */
-.page-visible {
-    opacity: 1;
-}
 
 /* Global styles for fade effect */
 .fade {
