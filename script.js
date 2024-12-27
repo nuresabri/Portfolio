@@ -27,7 +27,7 @@ for (let i = 0; i < numberOfParticles; i++) {
     createParticle();
 }
 
-// Function to navigate to different pages with transitions
+// Function to navigate to different pages with smooth transitions
 function navigateTo(page) {
     const body = document.body;
     body.classList.add('fade-out'); // Add fade-out class for transition
@@ -40,5 +40,12 @@ function navigateTo(page) {
 
 // Add fade-in class on page load for smooth entry
 document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add("fade-in");
+    const body = document.body;
+    body.classList.add("page-visible"); // Ensure the page fades in when loaded
+
+    // Add event listener for transition
+    body.addEventListener('transitionend', () => {
+        // Optional: Perform any actions after transition ends
+    });
 });
+

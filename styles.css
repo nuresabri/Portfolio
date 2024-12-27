@@ -114,7 +114,44 @@ p a:active {
     padding: 20px 0;
 }
 
-/* Button container */
+#aboutme {
+    padding-top: 200px;
+    text-align: left;
+    flex: 1;
+    margin-right: 20px;
+}
+
+#aboutme h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+#aboutme p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-shadow: 2px 2px #a77575;
+    margin-right: 100px;
+}
+
+#projectstitle {
+    padding-top: 500px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+img {
+    margin-top: 200px;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -316,3 +353,36 @@ canvas {
     pointer-events: none;
     z-index: 1; /* Behind the content */
 }
+
+/* Add this CSS to styles.css */
+.page {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* This class will be applied when the page is fully loaded */
+.page-visible {
+    opacity: 1;
+}
+
+/* Global styles for fade effect */
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Optionally, you can add a fade-out effect for the body */
+.fade-out {
+    animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
