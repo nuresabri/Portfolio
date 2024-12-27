@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +6,12 @@
 
 @font-face {
     font-family: 'CustomFont'; 
-    src: url("Coolvetica\ Rg.otf");
+    src: url("Coolvetica Rg.otf");
 }
 
 @font-face {
     font-family: 'Custom2';
-    src: url("Coolvetica\ Rg\ Cond.otf");
+    src: url("Coolvetica Rg Cond.otf");
 }
 
 h1 {
@@ -23,20 +22,31 @@ h1 {
     text-shadow: 4px 4px #c62323;
 }
 
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 body {
     font-family: 'CustomFont', sans-serif;
-    min-height: 100vh; /* Allow the body to expand with content */
+    min-height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to the top */
+    align-items: flex-start;
     background: linear-gradient(-45deg, #b8d5ff, #a7a7fc, #7e9ad7, #7895ff);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     color: #fff;
     position: relative;
-    overflow: auto; /* Allow scrolling */
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
+
+
 
 table {
     margin: auto;
@@ -64,40 +74,13 @@ p a:active {
     color: #b1563a;
 }
 
-/* Particle effect */
-.particle {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: moveParticle 4s linear infinite;
-}
 
-@keyframes moveParticle {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(300px, 300px);
-    }
-}
-
-/* Gradient Background */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Main container */
 #main-container {
+    width: 80%;
     text-align: center;
     padding-top: 20px;
     width: 80%;
     position: relative;
-    z-index: 10; /* Ensure content stays on top of the particles */
 }
 
 #Download {
@@ -243,6 +226,7 @@ button:hover {
 }
 
 #mainpage {
+    margin-left: 10px;
     padding-top: 240px;
 }
 
@@ -344,19 +328,6 @@ img {
     transform: scale(1.1);
 }
 
-/* Particles on the Screen */
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1; /* Behind the content */
-}
-
-
-/* Global styles for fade effect */
 .fade {
     animation: fadeEffect 1s ease-in-out;
 }
@@ -366,7 +337,6 @@ canvas {
     100% { opacity: 1; }
 }
 
-/* Optionally, you can add a fade-out effect for the body */
 .fade-out {
     animation: fadeOut 1s ease-in-out;
 }
@@ -375,5 +345,3 @@ canvas {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
-
-

@@ -1,32 +1,3 @@
-// Particle effect
-const numberOfParticles = 50;  // Set the number of particles
-
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    
-    // Randomize initial position
-    particle.style.top = `${Math.random() * window.innerHeight}px`;
-    particle.style.left = `${Math.random() * window.innerWidth}px`;
-    
-    // Append particle to the body
-    document.body.appendChild(particle);
-
-    // Set a random animation direction
-    particle.style.animationDuration = `${Math.random() * 4 + 2}s`;
-
-    // Remove particle after animation ends
-    particle.addEventListener('animationiteration', () => {
-        particle.remove();
-        createParticle();
-    });
-}
-
-// Create the particles on load
-for (let i = 0; i < numberOfParticles; i++) {
-    createParticle();
-}
-
 // Function to navigate to different pages with smooth transitions
 function navigateTo(page) {
     const body = document.body;
