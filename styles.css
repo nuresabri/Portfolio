@@ -25,15 +25,17 @@ h1 {
 
 body {
     font-family: 'CustomFont', sans-serif;
-    height: 100vh;
+    min-height: 100vh; /* Allow the body to expand with content */
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(-45deg, #cad4ff, #a8b5ff, #5480e1, #315cf7);
+    align-items: flex-start; /* Align to the top */
+    background: linear-gradient(-45deg, #b8d5ff, #a7a7fc, #7e9ad7, #7895ff);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     color: #fff;
+    position: relative;
+    overflow: auto; /* Allow scrolling */
 }
 
 table {
@@ -62,16 +64,40 @@ p a:active {
     color: #b1563a;
 }
 
+/* Particle effect */
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: moveParticle 4s linear infinite;
+}
+
+@keyframes moveParticle {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(300px, 300px);
+    }
+}
+
+/* Gradient Background */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
+/* Main container */
 #main-container {
     text-align: center;
     padding-top: 20px;
     width: 80%;
+    position: relative;
+    z-index: 10; /* Ensure content stays on top of the particles */
 }
 
 #Download {
@@ -88,44 +114,7 @@ p a:active {
     padding: 20px 0;
 }
 
-#aboutme {
-    padding-top: 200px;
-    text-align: left;
-    flex: 1;
-    margin-right: 20px;
-}
-
-#aboutme h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-#aboutme p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    text-shadow: 2px 2px #a77575;
-    margin-right: 100px;
-}
-
-#projectstitle {
-    padding-top: 500px;
-}
-
-h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-}
-
-img {
-    margin-top: 200px;
-    max-width: 600px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    margin-right: auto;
-    margin-left: auto;
-}
-
+/* Button container */
 .button-container {
     display: flex;
     justify-content: center;
@@ -163,6 +152,7 @@ button:hover {
      0 12px 10px -3px #39a2db;
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -205,6 +195,73 @@ button:hover {
     transform: scale(1.1);
 }
 
+/* About Me and Project Sections */
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0;
+}
+
+#mainpage {
+    padding-top: 240px;
+}
+
+/* Adjusting spacing above sections */
+#aboutme {
+    padding-top: 50px; /* Reduce space above 'About Me' */
+    text-align: left;
+    flex: 1;
+    margin-right: 20px;
+}
+
+#projectstitle {
+    padding-top: 70px; /* Adjust space above 'Projects' */
+}
+
+#contactme {
+    padding-top: 150px; /* Increase space above 'Contact Me' */
+}
+
+/* Ensure overall layout remains consistent */
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+#aboutme h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+#aboutme p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-shadow: 2px 2px #a77575;
+    margin-right: 100px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+img {
+    margin-top: 70px;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Project Cards */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -247,4 +304,15 @@ button:hover {
 .project-card a:hover {
     color: #f39c12;
     transform: scale(1.1);
+}
+
+/* Particles on the Screen */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Behind the content */
 }
