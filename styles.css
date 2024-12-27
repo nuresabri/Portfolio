@@ -214,6 +214,7 @@ button:hover {
 }
 
 .navbar-links {
+    cursor: pointer;
     display: flex;
     gap: 20px;
 }
