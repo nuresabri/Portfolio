@@ -20,3 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Add event listeners for navigation links
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default navigation
+        const href = this.href;
+
+        // Add fade-out class
+        document.body.classList.add('fade-out');
+
+        // Wait for the fade-out animation to complete before navigating
+        setTimeout(() => {
+            window.location.href = href;
+        }, 1000); // Match this with your fadeOut animation duration
+    });
+});
+
+

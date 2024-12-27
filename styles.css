@@ -332,13 +332,21 @@ img {
     animation: fadeIn 1s ease-in-out forwards; /* Ensure only elements that need fading in have this */
 }
 
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards; /* Ensure elements that need fading out have this */
+}
+
+body {
+    animation: fadeIn 1s ease-in-out forwards; /* Default page fade-in */
+}
+
+body.fade-out {
+    animation: fadeOut 1s ease-in-out forwards; /* Trigger fade-out before navigating */
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-.fade-out {
-    animation: fadeOut 1s ease-in-out forwards; /* Ensure elements that need fading out have this */
 }
 
 @keyframes fadeOut {
