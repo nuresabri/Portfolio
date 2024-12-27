@@ -37,9 +37,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(-45deg, #b8d5ff, #a7a7fc, #7e9ad7, #7895ff);
+    background: linear-gradient(-45deg, #d9e1ed, #8888ed, #a1bbf4, #5176fc);
     background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    animation: gradientBG 2s ease infinite;
     color: #fff;
     position: relative;
     overflow-x: hidden;
@@ -329,19 +329,20 @@ img {
 }
 
 .fade {
-    animation: fadeEffect 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out forwards; /* Ensure only elements that need fading in have this */
 }
 
-@keyframes fadeEffect {
+@keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
 .fade-out {
-    animation: fadeOut 1s ease-in-out;
+    animation: fadeOut 1s ease-in-out forwards; /* Ensure elements that need fading out have this */
 }
 
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
+
