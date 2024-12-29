@@ -6,7 +6,7 @@ function navigateTo(page) {
     // Wait for the fade-out animation to complete before navigating
     setTimeout(() => {
         window.location.href = page;
-    }, 500); // Match the duration of the fade-out transition in CSS
+    }, 375); // Match the duration of the fade-out transition in CSS
 }
 
 // Add fade-in class on page load for smooth entry
@@ -32,7 +32,7 @@ document.querySelectorAll('a').forEach(link => {
         // Wait for the fade-out animation to complete before navigating
         setTimeout(() => {
             window.location.href = href;
-        }, 1000); // Match this with your fadeOut animation duration
+        }, 750); // Match this with your fadeOut animation duration
     });
 });
 

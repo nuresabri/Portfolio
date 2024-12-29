@@ -329,19 +329,19 @@ img {
 }
 
 .fade {
-    animation: fadeIn 1s ease-in-out forwards; /* Ensure only elements that need fading in have this */
+    animation: fadeIn 0.75s ease-in-out forwards; /* Ensure only elements that need fading in have this */
 }
 
 .fade-out {
-    animation: fadeOut 1s ease-in-out forwards; /* Ensure elements that need fading out have this */
+    animation: fadeOut 0.75s ease-in-out forwards; /* Ensure elements that need fading out have this */
 }
 
 body {
-    animation: fadeIn 1s ease-in-out forwards; /* Default page fade-in */
+    animation: fadeIn 0.75s ease-in-out forwards; /* Default page fade-in */
 }
 
 body.fade-out {
-    animation: fadeOut 1s ease-in-out forwards; /* Trigger fade-out before navigating */
+    animation: fadeOut 0.75s ease-in-out forwards; /* Trigger fade-out before navigating */
 }
 
 @keyframes fadeIn {
